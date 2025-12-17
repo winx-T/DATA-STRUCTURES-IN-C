@@ -375,7 +375,7 @@ int main() {
         printf("* 7. Count nodes\n");
         printf("* 8. Print list\n");
         printf("* 9. Delete by value\n");
-        printf("* 12. Clear the list\n");
+        printf("* 10. Clear the list\n");
         printf("* 11. Print in reverse\n");
         printf("* 12. Exit\n");
         printf("*******************************\n");
@@ -440,3 +440,4 @@ int main() {
 
     return 0;
 }
+
