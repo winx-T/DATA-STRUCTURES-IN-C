@@ -122,19 +122,21 @@ void add_beg(struct node** head, int x) {
   * @param x: The integer value to be stored in the new node.
 */
 
-void add_at_end(struct node *head, int x) {
-    struct node *ptr, *new_node;
-    ptr = head;
-    new_node = (struct node *)malloc(sizeof(struct node));
-
+void add_at_end(struct node **head, int x) {
+    struct node *new_node = malloc(sizeof(struct node));
     if (new_node == NULL) {
         printf("Memory allocation failed\n");
         return;
     }
-
     new_node->data = x;
     new_node->link = NULL;
 
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
+
+    struct node *ptr = *head;
     while (ptr->link != NULL) {
         ptr = ptr->link;
     }
@@ -600,3 +602,4 @@ int main() {
     }
     return 0;
 }
+
